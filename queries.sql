@@ -13,7 +13,6 @@ SELECT COUNT(*) FROM animals;
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0 ;
 SELECT AVG(weight_kg) FROM animals;
 SELECT COUNT(*) as escape_attempts,neutered FROM animals GROUP BY neutered;
-SELECT MAX(weight_kg), MIN(weight_kg) FROM animals WHERE species='pokemon';
-SELECT MAX(weight_kg), MIN(weight_kg) FROM animals WHERE species='digimon';
-SELECT AVG(escape_attempts) FROM animals  WHERE species='pokemon' AND date_of_birth BETWEEN '1900-01-01' AND '2021-01-01';
-SELECT AVG(escape_attempts) FROM animals  WHERE species='digimon' AND date_of_birth BETWEEN '1900-01-01' AND '2021-01-01';
+SELECT MAX(weight_kg), MIN(weight_kg)  FROM animals GROUP BY neutered;
+SELECT AVG(escape_attempts) FROM animals WHERE  date_of_birth BETWEEN '1900-01-01' AND '2021-12-31' GROUP BY neutered;
+
