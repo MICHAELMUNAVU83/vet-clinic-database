@@ -6,3 +6,6 @@ ALTER TABLE animals
 ALTER COLUMN name TYPE varchar(200);
 ALTER TABLE animals  ADD PRIMARY KEY (id);
 ALTER TABLE animals  ALTER COLUMN id  SET NOT NULL;
+
+ALTER TABLE animals
+ADD COLUMN species varchar(200);
